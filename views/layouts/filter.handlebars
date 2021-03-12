@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="/styles/styles.css">
+	<title>SpaceX Launch Programs</title>
+</head>
+
+<body>
+	<h1>SpaceX Launch Programs</h1>
+	<div class="space-data">
+		<h2>Filters</h2>
+		<div id="myBtnContainer">
+			<h3>Launch Year</h3>
+			<a class="btn " href="/filter?year=2006"> 2006</a>
+			<a class="btn" href="/filter?year=2007"> 2007</a>
+			<a class="btn" href="/filter?year=2008"> 2008</a>
+			<a class="btn" href="/filter?year=2009"> 2009</a>
+			<a class="btn" href="/filter?year=2010"> 2010</a>  <a class="btn " href="/filter?year=2011"> 2011</a>
+			<a class="btn" href="/filter?year=2012"> 2012</a>
+			<a class="btn" href="/filter?year=2013"> 2013</a>
+			<a class="btn" href="/filter?year=2014"> 2014</a>
+			<a class="btn" href="/filter?year=2015"> 2015</a>
+			<a class="btn " href="/filter?year=2016"> 2016</a>
+			<a class="btn" href="/filter?year=2017"> 2017</a>
+			<a class="btn" href="/filter?year=2018"> 2018</a>
+			<a class="btn" href="/filter?year=2019"> 2019</a>
+			<a class="btn" href="/filter?year=2020"> 2020</a>
+		</div>
+		<div id="myBtnContainer">
+			<h3>Successfull Launch</h3>
+			<a class="btn " href="/filter?launch= true"> True</a>
+			<a class="btn" href="/filter?launch= false"> False</a>
+		</div>
+		<div id="myBtnContainer">
+			<h3>Successfull Landing</h3>
+			<a class="btn " href="/filter?landing= true"> True</a>
+			<a class="btn" href="/filter?landing= false"> False</a>
+		</div>
+		<div class="align-right">{{#each breeds}}
+			<div class="card ">
+				<img src="{{this.links.mission_patch}}" alt="Avatar" style="width:100%">
+				<div class="container">
+					<h4><b>{{this.mission_name}} # {{this.flight_number}}</b></h4>
+					<p><b>Mission Ids: </b>
+					</p>
+					<p>{{this.mission_id}}</p>
+					<p><b>Launch Year </b>
+					</p>
+					<p>{{this.launch_year}}</p>
+					<p><b>Successfull Launch </b>
+					</p>
+					<p>{{this.launch_success}}</p>
+					<p><b>Successfull Landing </b>
+					</p>
+					<p>{{this.land_success}}</p>
+				</div>
+			</div>{{/each}}</div>
+	</div>
+	<p>Developed By {{name}}</p>
+</body>
+
+</html>

@@ -1,0 +1,7 @@
+{
+  "name": "SpaceX Data Handlebars",
+  "description": "A minimal ExpressJS server boilerplate using Handlebars view engine.",
+  "repository": "https://github.com/sanchit1310/space-x-data.git",
+  "logo": "https://i.imgur.com/ksfkDzc.png",
+  "keywords": ["node", "express", "webserver", "handlebars", "boilerplate", "expressjs", "javascript"]
+}
