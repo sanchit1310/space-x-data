@@ -15,11 +15,11 @@ async function routeFilter(req, res, next) {
     const queryObject = url.parse(req.url, true).query;
 
     if (queryObject.year) {
-        urls = process.env.SPACE_X_YEAR_API`${queryObject.year}`;
+        urls = process.env.SPACE_X_YEAR_API + `${queryObject.year}`;
     } else if (queryObject.launch) {
-        urls = process.env.SPACE_X_LAUNCH_API`${queryObject.launch}`
+        urls = process.env.SPACE_X_LAUNCH_API+ `${queryObject.launch}`
     } else {
-        urls = process.env.SPACE_X_LANDING_API`${queryObject.landing}`
+        urls = process.env.SPACE_X_LANDING_API+ `${queryObject.landing}`
     }
     const breeds = getSpaceData(urls)
         .then(response => {
